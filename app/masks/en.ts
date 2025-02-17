@@ -1,4 +1,5 @@
 import { BuiltinMask } from "./typing";
+import { DefaultModel } from "./typing";
 
 export const EN_MASKS: BuiltinMask[] = [
   {
@@ -14,7 +15,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4",
+      model: DefaultModel, //"gpt-4",
       temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -60,7 +61,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4",
+      model: DefaultModel, //"gpt-4",
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -86,7 +87,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: DefaultModel, //"gpt-3.5-turbo",
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -118,7 +119,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4",
+      model: DefaultModel, //"gpt-4",
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
