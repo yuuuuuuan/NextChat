@@ -569,10 +569,10 @@ export function FullScreen(props: any) {
     };
     document.addEventListener("fullscreenchange", handleScreenChange);
 
-    // 自动进入全屏模式
-    if (ref.current) {
-      toggleFullscreen();
-    }
+    // // 自动进入全屏模式
+    // if (ref.current) {
+    //   toggleFullscreen();
+    // }
 
     return () => {
       document.removeEventListener("fullscreenchange", handleScreenChange);
