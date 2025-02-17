@@ -553,7 +553,7 @@ export function Selector<T>(props: {
 export function FullScreen(props: any) {
   const { children, right = 10, top = 10, ...rest } = props;
   const ref = useRef<HTMLDivElement>();
-  const [fullScreen, setFullScreen] = useState(true);
+  const [fullScreen, setFullScreen] = useState(false);
   const toggleFullscreen = useCallback(() => {
     if (!document.fullscreenElement) {
       ref.current?.requestFullscreen();
@@ -568,6 +568,12 @@ export function FullScreen(props: any) {
       }
     };
     document.addEventListener("fullscreenchange", handleScreenChange);
+
+    // 自动进入全屏模式
+    if (ref.current) {
+      toggleFullscreen();
+    }
+
     return () => {
       document.removeEventListener("fullscreenchange", handleScreenChange);
     };
